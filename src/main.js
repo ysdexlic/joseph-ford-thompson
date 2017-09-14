@@ -11,9 +11,7 @@ export class Main extends Component {
       <main className={this.props.sticky ? 'sticky' : ''}>
         <Switch>
           <Route exact path='/' component={Home}/>
-          <Route exact path='/about' component={Home}/>
-          <Route exact path='/portfolio' component={Home}/>
-          <Route path="/*" component={NotFound}/>
+          <Route path="/*" component={Home}/>
         </Switch>
       </main>
     )
