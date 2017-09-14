@@ -1,8 +1,57 @@
-.home {
-
-}
+// .home {
+// 	background: url("/style/images/background.jpg") center center / cover;
+// }
 
 .landing {
 	width: 100%;
-  height: 100vh;
+  height: 60vh;
+	background: url('/style/images/triangle.png') center center/contain no-repeat;
+}
+
+
+.selfie {
+	width: 50vw;
+  height: 45vh;
+	max-width: 250px;
+	max-height: 350px;
+	top: 0;
+  left: 0;
+  right: 0;
+	bottom: 10%;
+  margin: auto;
+	z-index: 20;
+	background: url('/style/images/selfie-2.jpg') 0 0/cover no-repeat;
+	border: 2px solid white;
+	margin-bottom: 10px;
+}
+
+.ux-design {
+	height: 70px;
+	width: 90%;
+	margin: auto;
+	background: url('/style/images/UX.png') center center/contain no-repeat;
+}
+
+.social {
+	height: 60px;
+	text-align: center;
+	>div {
+		display: inline-block;
+		height: 100%;
+		width: 50%;
+		&#contact {
+			background: url('/style/images/contact.png') center center / contain no-repeat;
+		}
+		&#linkedin {
+			background: url('/style/images/contact-2.png') center center / contain no-repeat;
+		}
+	}
+}
+
+
+
+
+@media screen and (min-width: $tablet) {
+
+
 }
