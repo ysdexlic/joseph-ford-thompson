@@ -46,8 +46,8 @@ export class Home extends Component {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
             deserunt mollit anim id est laborum.
           </p>
-          <div className="button" onClick={this.openAboutModal}>
-            <span>+</span>
+          <div className="button">
+            <span onClick={this.openAboutModal}>+</span>
           </div>
         </div>
 

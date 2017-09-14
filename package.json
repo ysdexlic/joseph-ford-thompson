@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --inline --progress --host 192.168.0.19",
     "build": "NODE_ENV=production webpack --progress -p --colors",
     "postbuild": "npm run copyassets && npm run stylus",
-    "copyassets": "mkdir -p build/style && mkdir -p build/style/images && cp -r style/images/* build/style/images && cp -r style/fonts/* build/style/fonts",
+    "copyassets": "mkdir -p build/style && mkdir -p build/style/images && cp -r style/images/* build/style/images",
     "stylus": "stylus style/style.styl -o build/style/style.css",
     "server": "node server"
   },
