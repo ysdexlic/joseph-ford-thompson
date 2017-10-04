@@ -5,8 +5,18 @@
   }
   p {
     font-weight: 600;
+    &:nth-child(2) {
+      margin-bottom: 20px;
+    }
     &:not(:last-child) {
       margin-bottom: 20px;
     }
+  }
+}
+
+.portfolio-item {
+  background: $secondary-green;
+  &_image {
+    text-align: center;
   }
 }

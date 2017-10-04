@@ -1,54 +1,15 @@
 import React, { Component } from 'react'
 import Button from '../common/button'
+import { Splitter } from '../common/splitter'
 
 export class Home extends Component {
-
-  constructor() {
-    super();
-    this.state = {
-      bottom: null
-    }
-  }
-
-  openAboutModal = (e) => {
-    e.preventDefault();
-    let target = e.target;
-    if(target.className.split(' ').indexOf('button') == -1) {
-      target = e.target.parentElement;
-    }
-    const elementPosition = target.offsetTop;
-    const elementHeight = target.clientHeight;
-    const scrollPosition = window.pageYOffset;
-    const windowSize     = window.innerHeight;
-    const bodyHeight     = document.body.offsetHeight;
-    const scrollFromBottom = Math.max(bodyHeight - (scrollPosition + windowSize), 0);
-
-    const bottom = (bodyHeight - (elementPosition + elementHeight)) - scrollFromBottom;
-
-    this.setState({bottom})
-
-    setTimeout(() => {
-      this.props.dispatch({type: 'OPEN_MODAL', payload: {
-        title: 'About',
-        body: `some stuff about joe, oh jeeeez
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-              irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-              deserunt mollit anim id est laborum.`
-      }})
-
-      this.setState({bottom: null})
-    }, 10)
-
-  }
 
   render() {
     return (
       <div className="home">
 
         <div className="landing">
+          <div className="gradient"></div>
           <div>
             <h2>Joseph Ford Thompson</h2>
             <h1>UX Designer</h1>
@@ -56,7 +17,7 @@ export class Home extends Component {
         </div>
 
         <div className="about">
-          <h1>About</h1>
+          <Splitter />
           <p>
             <span className="pink">My professional motivation</span> is to collaborate
             <span className="italic">without ego or preconception</span> on emotionally engaging products.
@@ -89,7 +50,38 @@ export class Home extends Component {
           }
         />
 
-        <div style={{marginBottom: '200px'}}></div>
+        <div className="about">
+          <Splitter />
+          <h1>Work</h1>
+          <p>
+            <span className="pink">mynextgame</span> - a GoodReads style social network for gamers to catalogue and review their video game library, as well as find the next great game to play.
+          </p>
+          <div className="portfolio-item">
+            <div className="portfolio-item_image">
+              <img src="/style/images/mockup-iphone-x@3x.png"/>
+            </div>
+          </div>
+        </div>
+
+        <Button name="See the design process"
+          title="About"
+          body={
+            `some stuff about joe, oh jeeeez
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum.`
+          }
+          style={{fontSize: '11px'}}
+        />
+
+      <Splitter />
+
+      <div className="contact">
+        
+      </div>
 
       </div>
     )

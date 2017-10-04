@@ -6,6 +6,7 @@ export class Button extends Component {
   constructor() {
     super();
     this.state = {
+      open: false,
       bottom: null
     }
   }
@@ -35,23 +36,27 @@ export class Button extends Component {
       }})
 
       this.setState({bottom: null})
+      this.setState({open: true})
     }, 10)
   }
 
   closeModal = (e) => {
     e.preventDefault();
+    this.setState({open: false})
     this.props.dispatch({type: 'CLOSE_MODAL'})
     document.body.style.overflow = null;
   }
 
   render() {
     return (
-      <div className={`button ${this.props.modal.open ? 'close' : 'open' }`}
-        style={{bottom: this.state.bottom}}
-        onClick={!this.props.modal.open ? this.openModal : this.closeModal}>
+      <div className="button-container">
+        <div className={`button ${this.state.open ? 'close' : 'open' }`}
+          style={{bottom: this.state.bottom}}
+          onClick={!this.props.modal.open ? this.openModal : this.closeModal}>
 
-        <span>+</span>
-        <p>{this.props.name}</p>
+          <span>+</span>
+          <p style={this.props.style}>{this.props.name}</p>
+        </div>
       </div>
     )
   }
