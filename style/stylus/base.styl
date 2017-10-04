@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway|Montserrat+Subrayada');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway:400,600|Montserrat+Subrayada');
 
 html, body {
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
@@ -76,8 +76,6 @@ main.sticky {
 #app {
 	overflow: hidden;
 	>div.content {
-		transform: translate3d(0, 0, 0);
-		transition: transform 0.75s;
 		.modal-background {
 			position: fixed;
 			width: 100%;
@@ -87,17 +85,17 @@ main.sticky {
 			transition: background .75s;
 		}
 		main {
-			transition: transform .75s;
+			// transition: transform .75s;
+			// transform: translate3d(0, 0, 0) scale(1);
 		}
 		&.modal-open {
-			transform: translate3d(0, 0, 0) scale(1.1);
 			overflow: hidden;
 			.modal-background {
 				background: rgba(0, 0, 0, 0.9);
 				z-index: 998;
 			}
 			main {
-				// transform: scale(0.8);
+				// transform: scale(1.1);
 			}
 		}
 	}
