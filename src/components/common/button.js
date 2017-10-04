@@ -30,10 +30,7 @@ export class Button extends Component {
     document.body.style.overflow = 'hidden';
 
     setTimeout(() => {
-      this.props.dispatch({type: 'OPEN_MODAL', payload: {
-        title: this.props.title,
-        body: this.props.body
-      }})
+      this.props.dispatch({type: 'OPEN_MODAL', payload: this.props.html})
 
       this.setState({bottom: null})
       this.setState({open: true})

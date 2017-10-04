@@ -7,9 +7,7 @@ export class Modal extends Component {
     const { modal } = this.props
 
     return (
-      <div className={`modal ${modal.open ? 'active' : ''}`}>
-        <h2>{modal.title}</h2>
-        <p>{modal.body}</p>
+      <div className={`modal ${modal.open ? 'active' : ''}`} dangerouslySetInnerHTML={{__html: modal.html}}>
       </div>
     )
   }
