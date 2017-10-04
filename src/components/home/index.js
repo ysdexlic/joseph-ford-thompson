@@ -23,17 +23,10 @@ export class Home extends Component {
       <div className="home">
 
         <div className="landing">
-          <div style={{display: 'table', width: '100%', height: '100%'}}>
-            <div style={{display: 'table-cell', verticalAlign: 'middle'}}>
-              <div className="selfie"></div>
-              <div className="ux-design"></div>
-            </div>
+          <div>
+            <h2>Joseph Ford Thompson</h2>
+            <h1>UX Designer</h1>
           </div>
-        </div>
-
-        <div className="social">
-          <div id="linkedin"></div>
-          <div id="contact"></div>
         </div>
 
         <div className="about">

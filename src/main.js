@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Switch, Route, Link } from 'react-router-dom'
-import { connect } from 'react-redux'
 
 import Home from './components/home'
 import NotFound from './components/common/notFound'
@@ -8,7 +7,7 @@ import NotFound from './components/common/notFound'
 export class Main extends Component {
   render() {
     return (
-      <main className={this.props.sticky ? 'sticky' : ''}>
+      <main>
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route path="/*" component={Home}/>
@@ -18,10 +17,5 @@ export class Main extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    sticky: state.header.sticky
-  }
-}
 
-export default connect(mapStateToProps)(Main)
+export default Main

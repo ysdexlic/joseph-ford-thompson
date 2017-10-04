@@ -1,13 +1,11 @@
 header {
   padding: 10px 0;
-  position: sticky;
+  position: absolute;
   height: $header-height;
   width: 100%;
   box-sizing: border-box;
   z-index: 99;
-  transition: top .5s, background-color .5s;
-  top: -50px;
-  // background-color: $primary-color;
+  top: 0;
   .logo {
     position: relative;
     transform: rotate(3deg);
@@ -17,18 +15,4 @@ header {
     margin: auto;
     transition: width .5s, margin .5s;
   }
-
-  &.sticky {
-    position: fixed;
-    top: 0;
-    background-color: white;
-    border-bottom: 1px solid grey;
-
-    .logo {
-      width: 40%;
-      margin: 0 0 0 10px;
-    }
-
-  }
-
 }

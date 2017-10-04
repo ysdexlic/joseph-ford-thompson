@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway|Montserrat+Subrayada');
 
 html, body {
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
@@ -17,8 +17,8 @@ html, body {
 html {
 	height: 100%;
 	box-sizing: border-box;
-	background-color: $primary-color;
-	background: url("/style/images/background.jpg") center center / cover;
+	// background-color: $primary-color;
+	// background: url("/style/images/background.jpg") center center / cover;
 }
 
 // TODO: uncomment when footer is added (for sticky footer)
@@ -34,8 +34,9 @@ figure {
 }
 
 h1, h2, h3, h4, h5 {
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Montserrat Subrayada', sans-serif;
 	margin: 0;
+	letter-spacing: -0.1px;
 }
 
 h1 {
@@ -69,11 +70,14 @@ a {
 }
 
 main.sticky {
-	padding-top: $header-height;
+	// padding-top: $header-height;
 }
 
 #app {
+	overflow: hidden;
 	>div.content {
+		transform: translate3d(0, 0, 0);
+		transition: transform 0.75s;
 		.modal-background {
 			position: fixed;
 			width: 100%;
@@ -86,6 +90,8 @@ main.sticky {
 			transition: transform .75s;
 		}
 		&.modal-open {
+			transform: translate3d(0, 0, 0) scale(1.1);
+			overflow: hidden;
 			.modal-background {
 				background: rgba(0, 0, 0, 0.9);
 				z-index: 998;
@@ -98,10 +104,6 @@ main.sticky {
 }
 
 @media screen and (min-width: $tablet) {
-
-	body {
-		padding-bottom: 200px;
-	}
 
   .mobile-only {
     display: none;
