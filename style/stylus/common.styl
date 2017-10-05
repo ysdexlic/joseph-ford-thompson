@@ -71,6 +71,7 @@
       text-align: center;
       transition: top 1s;
       top: 0;
+      line-height: 14px;
     }
     &.close {
       position: fixed;
@@ -118,6 +119,24 @@
   font-style: italic;
 }
 
+.social-icons_dark {
+  display: inline-block;
+  text-align: right;
+  color: $grey;
+  >a {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-left: 15px;
+  }
+  .l-icon {
+    background: url('/style/images/linkedin-dark.svg');
+  }
+  .t-icon {
+    background: url('/style/images/twitter-dark.svg');
+  }
+}
+
 @media (hover: hover) {
   .button:hover {
     background: rgba(0, 0, 0, 0.7);
@@ -130,5 +149,12 @@
     h1, h2, h3, h4 {
       text-align: left;
     }
+  }
+}
+
+@media screen and (min-width: $large-screen) {
+  .modal {
+    padding: 30px 400px 50px;
+
   }
 }

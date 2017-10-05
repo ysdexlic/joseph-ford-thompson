@@ -10,6 +10,18 @@ header {
   .social-icons {
     text-align: right;
     color: $grey;
+    >a {
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      margin: 0 10px;
+    }
+    .l-icon {
+      background: url('/style/images/linkedin.svg');
+    }
+    .t-icon {
+      background: url('/style/images/twitter.svg');
+    }
   }
   h1, h2, h3, h4 {
     color: $grey;
@@ -27,6 +39,14 @@ header {
     position: relative;
     >div {
       display: table-cell !important;
+    }
+    .social-icons {
+      .l-icon {
+        background: url('/style/images/linkedin-dark.svg');
+      }
+      .t-icon {
+        background: url('/style/images/twitter-dark.svg');
+      }
     }
   }
 }

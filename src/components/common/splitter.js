@@ -6,7 +6,7 @@ export class Splitter extends Component {
     return (
       <div>
         <p className="pink"
-         style={{fontSize: '30px', fontWeight: '400', letterSpacing: '4px', textAlign: 'center', lineHeight: '20px', marginBottom: '20px'}}>+++++++++++++++++++</p>
+         style={{fontSize: '30px', fontWeight: '400', letterSpacing: '4px', textAlign: 'center', lineHeight: '20px', marginBottom: '20px', ...this.props.style}}>+++++++++++++++++++</p>
       </div>
     )
   }

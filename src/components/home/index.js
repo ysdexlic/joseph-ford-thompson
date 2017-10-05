@@ -42,6 +42,19 @@ export class Home extends Component {
 
         <Button name="Read More"
           html={`
+
+            <div>
+      				<div>
+  							<h4 style="margin: 0; text-align: left; color: #999; display: inline-block;">Joseph Ford Thompson</h4>
+                <div class="social-icons_dark">
+        					<a href="http://www.linkedin.com/in/josephfordthompson" target="_blank" class="l-icon"></a>
+        					<a href="http://www.twitter.com/jfordthompson" target="_blank" class="t-icon"></a>
+        				</div>
+
+                <p class="pink" style="font-size: 30px; font-weight: 400; letter-spacing: 4px; line-height: 20px;">+++++++++++++++++++</p>
+      				</div>
+      			</div>
+
             <h1>About</h1>
 
             <div>
@@ -89,6 +102,19 @@ export class Home extends Component {
 
         <Button name="See the design process" id="design-process-button"
           html={`
+
+            <div>
+      				<div>
+  							<h4 style="margin: 0; text-align: left; color: #999; display: inline-block;">Joseph Ford Thompson</h4>
+                <div class="social-icons_dark">
+        					<a href="http://www.linkedin.com/in/josephfordthompson" target="_blank" class="l-icon"></a>
+        					<a href="http://www.twitter.com/jfordthompson" target="_blank" class="t-icon"></a>
+        				</div>
+
+                <p class="pink" style="font-size: 30px; font-weight: 400; letter-spacing: 4px; line-height: 20px;">+++++++++++++++++++</p>
+      				</div>
+      			</div>
+
             <h1>Work</h1>
 
             <div>
@@ -108,12 +134,12 @@ export class Home extends Component {
                 <li>Find ways to give value to the user while making the user valuable to stakeholders</li>
               </ul>
 
-              <div class="portfolio-item_image" style="margin-bottom: 20px;">
+              <div class="portfolio-item_image" style="margin: 40px 0;">
                 <img src="/style/images/scanned-documents@3x.jpg" style="max-width: 100%; max-height: 500px"/>
               </div>
             </div>
 
-            <div>
+            <div style="margin-bottom: 40px;">
               <h2 class="pink">CHALLENGES</h2>
               <ul>
                 <li>Lots of features - potential for overwhelm</li>
@@ -141,7 +167,7 @@ export class Home extends Component {
                 <br />
                 just-in-time updates that are relevant to the user’s now playing and want list queue
               </p>
-              <p>
+              <p style="margin-bottom: 40px;">
                 <span style="font-weight: 600;">A minimalistic but full featured hub</span>
                 <br />
                 Deals, news, reviews, curated lists, all organised neatly on the home screen
@@ -164,7 +190,7 @@ export class Home extends Component {
 
       <Splitter />
 
-      <div className="contact about">
+      <div className="contact">
         <a href="http://www.linkedin.com/in/josephfordthompson" target="_blank" className="li">View profile on linkedin</a>
         <a href="/docs/cv.pdf" target="_blank" className="cv">Download CV</a>
         <a href="mailto:jfordthompson@gmail.com" className="email">Contact me</a>

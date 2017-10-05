@@ -1,5 +1,6 @@
 .about {
   padding: 10px 30px;
+  transition: padding .2s;
   h1 {
     margin-bottom: 10px;
   }
@@ -22,7 +23,8 @@
 }
 
 .contact {
-  max-width: 800px;
+  max-width: 500px;
+  padding: 10px 30px;
   margin: 0 auto 20px;
   text-transform: uppercase;
   >a {
@@ -73,8 +75,14 @@
   }
 }
 
-@media screen and (min-width: $tablet) {
+@media screen and (min-width: $desktop) {
   .about {
     padding: 10px 200px;
+  }
+}
+
+@media screen and (min-width: $large-screen) {
+  .about {
+    padding: 10px 400px;
   }
 }
