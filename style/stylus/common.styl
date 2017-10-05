@@ -85,7 +85,7 @@
       }
       >span {
         transform: rotateZ(45deg);
-        // border: 0;
+        border: 0;
         font-size: 50px;
       }
       &.show-text {
@@ -93,6 +93,7 @@
         background: rgba(0, 0, 0, 0.8);
         transition: bottom .75s, max-width .5s, background .5s;
         >span {
+          border: 1px solid;
           &::after {
             content: 'CLOSE';
             display: inline-block;
@@ -123,6 +124,7 @@
   display: inline-block;
   text-align: right;
   color: $grey;
+  float: right;
   >a {
     width: 15px;
     height: 15px;
@@ -145,16 +147,18 @@
 
 @media screen and (min-width: $tablet) {
   .modal {
-    padding: 30px 200px 50px;
+    padding: 30px 200px 150px;
     h1, h2, h3, h4 {
       text-align: left;
     }
+  }
+  .social-icons_dark {
+    float: none;
   }
 }
 
 @media screen and (min-width: $large-screen) {
   .modal {
-    padding: 30px 400px 50px;
-
+    padding: 30px 400px 150px;
   }
 }
