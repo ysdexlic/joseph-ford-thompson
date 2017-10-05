@@ -46,7 +46,7 @@ export class Button extends Component {
 
   render() {
     return (
-      <div className="button-container">
+      <div className="button-container" id={this.props.id}>
         <div className={`button ${this.state.open ? 'close' : 'open' }`}
           style={{bottom: this.state.bottom}}
           onClick={!this.props.modal.open ? this.openModal : this.closeModal}>

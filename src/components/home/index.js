@@ -12,7 +12,7 @@ export class Home extends Component {
         <div className="landing">
           <div className="landing-image"></div>
           <div className="landing-gradient"></div>
-          <div className="desktop-only landing-background"></div>
+          <div className="landing-background"></div>
           <div className="landing-text">
             <h2>Joseph Ford Thompson</h2>
             <h1>UX Designer</h1>
@@ -70,11 +70,7 @@ export class Home extends Component {
               <p>
                 I’m proficient in Sketch, Axure, wireframing, prototyping, user testing, flows, stories, personas, scenarios, customer journey maps and many other User Experience design processes, but I am an insatiable learner and always keen to learn and develop new skills.
               </p>
-
-
             </div>
-
-
           `}
         />
 
@@ -86,16 +82,64 @@ export class Home extends Component {
           </p>
           <div className="portfolio-item">
             <div className="portfolio-item_image">
-              <img src="/style/images/mockup-iphone-x@3x.png"/>
+              <img src="/style/images/mockup-iphone-x@3x.png" style={{maxHeight: '250px'}}/>
             </div>
           </div>
         </div>
 
-        <Button name="See the design process"
+        <Button name="See the design process" id="design-process-button"
           html={`
-            <h1>hello</h1>
+            <h1>Work</h1>
+
+            <div>
+              <h2 class="pink">MYNEXTGAME</h2>
+              <div class="portfolio-item" style="margin-bottom: 20px;">
+                <div class="portfolio-item_image">
+                  <img src="/style/images/mockup-iphone-x@3x.png" style="max-height: 250px;"/>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h2 class="pink">OBJECTIVES</h2>
+              <ul>
+                <li>Ideate and create a social network from scratch</li>
+                <li>Model after GoodReads / Letterboxd</li>
+                <li>Find ways to give value to the user while making the user valuable to stakeholders</li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 class="pink">CHALLENGES</h2>
+              <ul>
+                <li>Lots of features - potential for overwhelm</li>
+                <li>How to onboard users and get them to start a library and wishlist</li>
+                <li>Big database set and issues of how to reconcile duplicates</li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 class="pink">DESIGN DECISIONS</h2>
+              <p>
+                <span style="font-weight: 600;">Simple experience</span>
+                <br />
+                Funnel mobile users to home tab, where it is easy to add games to want list and diary, as well as see content from prodigious reviewers
+              </p>
+
+              <p>
+                <span style="font-weight: 600;">Guided usage based on standard T-shaped eye tracking pattern</span>
+                <br />
+                just-in-time updates that are relevant to the user’s now playing and want list queue
+              </p>
+
+              <p>
+                <span style="font-weight: 600;">A minimalistic but full featured hub</span>
+                <br />
+                Deals, news, reviews, curated lists, all organised neatly on the home screen
+              </p>
+            </div>
+
           `}
-          style={{fontSize: '11px'}}
         />
 
       <Splitter />
@@ -103,7 +147,7 @@ export class Home extends Component {
       <div className="contact about">
         <div className="li">View profile on linkedin</div>
         <div className="cv">Download my CV</div>
-        <div className="contact">Contact me</div>
+        <div className="email">Contact me</div>
       </div>
 
       </div>

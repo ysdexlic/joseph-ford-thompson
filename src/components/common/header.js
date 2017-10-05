@@ -5,7 +5,12 @@ export class Header extends Component {
 
 		return (
 			<header>
-				<div className="social-icons"></div>
+				<div className="desktop-only">
+					<h3>Joseph Ford Thompson</h3>
+				</div>
+				<div className="social-icons">
+					SOCIAL ICONS
+				</div>
 			</header>
 		);
 	}

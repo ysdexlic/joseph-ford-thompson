@@ -47,7 +47,10 @@
     background: rgba(0, 0, 0, 0.5);
     padding: 5px;
     color: $white;
-    transition: bottom .75s, max-width .75s;
+    transition: bottom .75s, max-width .75s, background .5s;
+    &:hover {
+      background: rgba(0, 0, 0, 0.7);
+    }
     >span {
       display: inline-block;
       vertical-align: middle;
@@ -61,11 +64,14 @@
       transition: transform 1s, font-size 1s;
     }
     >p {
+      position: relative;
       display: inline-block;
       font-size: 14px;
       vertical-align: middle;
       width: 100px;
       text-align: center;
+      transition: top 1s;
+      top: 0;
     }
     &.close {
       position: fixed;
@@ -75,7 +81,8 @@
       margin: auto;
       max-width: 40px;
       >p {
-        display: none;
+        // display: none;
+        top: 100px;
       }
       >span {
         transform: rotateZ(45deg);
@@ -83,6 +90,9 @@
         font-size: 50px;
       }
     }
+  }
+  &#design-process-button p {
+    font-size: 11px;
   }
 }
 

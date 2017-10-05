@@ -25,25 +25,35 @@
   max-width: 800px;
   margin: 0 auto 20px;
   >div {
-    width: 47.5%;
+    width: 48.5%;
     display: inline-block;
     text-align: center;
     padding: 10px 0;
     border-radius: 5px;
     cursor: pointer;
+    transition: background .5s;
     &.li {
       width: 100%;
       border: 2px solid #628cc4;
       display: block;
       margin: 0 auto 10px;
+      &:hover {
+        background: lighten(#628cc4,30);
+      }
     }
     &.cv {
       border: 2px solid $pink;
-      margin-right: 2.5%;
+      margin-right: 1.5%;
+      &:hover {
+        background: lighten($pink,40);
+      }
     }
-    &.contact {
+    &.email {
       border: 2px solid $green;
-      margin-left: 2.5%;
+      margin-left: 1.5%;
+      &:hover {
+        background: lighten($green,40);
+      }
     }
   }
 
