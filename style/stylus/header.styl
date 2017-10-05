@@ -1,4 +1,5 @@
 header {
+  display: table;
   padding: 10px;
   position: absolute;
   height: $header-height;
@@ -7,23 +8,25 @@ header {
   z-index: 99;
   top: 0;
   .social-icons {
-    float: right;
+    text-align: right;
     color: $grey;
   }
   h1, h2, h3, h4 {
     color: $grey;
   }
   >div {
-    display: inline-block;
+    display: table-cell;
+    vertical-align: middle;
   }
 }
 
 
 @media screen and (min-width: $tablet) {
   header {
+    padding: 10px 30px;
     position: relative;
     >div {
-      display: inline-block !important;
+      display: table-cell !important;
     }
   }
 }

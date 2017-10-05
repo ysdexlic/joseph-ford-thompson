@@ -145,9 +145,9 @@ export class Home extends Component {
       <Splitter />
 
       <div className="contact about">
-        <div className="li">View profile on linkedin</div>
-        <div className="cv">Download my CV</div>
-        <div className="email">Contact me</div>
+        <a href="http://www.linkedin.com/in/josephfordthompson" target="_blank" className="li">View profile on linkedin</a>
+        <a href="/docs/cv.pdf" className="cv">Download my CV</a>
+        <a href="mailto:jfordthompson@gmail.com" className="email">Contact me</a>
       </div>
 
       </div>

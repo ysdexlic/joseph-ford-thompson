@@ -24,7 +24,7 @@
 .contact {
   max-width: 800px;
   margin: 0 auto 20px;
-  >div {
+  >a {
     width: 48.5%;
     display: inline-block;
     text-align: center;
@@ -37,26 +37,39 @@
       border: 2px solid #628cc4;
       display: block;
       margin: 0 auto 10px;
-      &:hover {
-        background: lighten(#628cc4,30);
-      }
+      // &:hover {
+      //   background: lighten(#628cc4,30);
+      // }
     }
     &.cv {
       border: 2px solid $pink;
       margin-right: 1.5%;
-      &:hover {
-        background: lighten($pink,40);
-      }
+      // &:hover {
+      //   background: lighten($pink,40);
+      // }
     }
     &.email {
       border: 2px solid $green;
       margin-left: 1.5%;
-      &:hover {
-        background: lighten($green,40);
-      }
+      // &:hover {
+      //   background: lighten($green,40);
+      // }
     }
   }
+}
 
+@media (hover: hover) {
+  .contact a:hover {
+    &.li {
+      background: lighten(#628cc4,30);
+    }
+    &.cv {
+      background: lighten($pink,40);
+    }
+    &.email {
+      background: lighten($green,40);
+    }
+  }
 }
 
 @media screen and (min-width: $tablet) {

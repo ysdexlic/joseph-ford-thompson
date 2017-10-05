@@ -48,9 +48,6 @@
     padding: 5px;
     color: $white;
     transition: bottom .75s, max-width .75s, background .5s;
-    &:hover {
-      background: rgba(0, 0, 0, 0.7);
-    }
     >span {
       display: inline-block;
       vertical-align: middle;
@@ -81,7 +78,6 @@
       margin: auto;
       max-width: 40px;
       >p {
-        // display: none;
         top: 100px;
       }
       >span {
@@ -102,6 +98,12 @@
 
 .italic {
   font-style: italic;
+}
+
+@media (hover: hover) {
+  .button:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
 }
 
 @media screen and (min-width: $tablet) {

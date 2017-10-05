@@ -27,7 +27,7 @@ export class Button extends Component {
     const bottom = (bodyHeight - (elementPosition + elementHeight)) - scrollFromBottom;
 
     this.setState({bottom})
-    document.body.style.overflow = 'hidden';
+    // document.body.style.overflow = 'hidden';
 
     setTimeout(() => {
       this.props.dispatch({type: 'OPEN_MODAL', payload: this.props.html})
@@ -41,7 +41,7 @@ export class Button extends Component {
     e.preventDefault();
     this.setState({open: false})
     this.props.dispatch({type: 'CLOSE_MODAL'})
-    document.body.style.overflow = null;
+    // document.body.style.overflow = null;
   }
 
   render() {
