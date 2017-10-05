@@ -13,6 +13,9 @@ export class Button extends Component {
 
   openModal = (e) => {
     e.preventDefault();
+
+    document.getElementById('modal').scrollTop = 0;
+
     let target = e.target;
     if(target.className.split(' ').indexOf('button') == -1) {
       target = e.target.parentElement;
@@ -27,7 +30,12 @@ export class Button extends Component {
     const bottom = (bodyHeight - (elementPosition + elementHeight)) - scrollFromBottom;
 
     this.setState({bottom})
-    // document.body.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+
+    document.body.style.maxHeight = 'none';
+    document.documentElement.style.maxHeight = 'none';
+
 
     setTimeout(() => {
       this.props.dispatch({type: 'OPEN_MODAL', payload: this.props.html})
@@ -41,13 +49,14 @@ export class Button extends Component {
     e.preventDefault();
     this.setState({open: false})
     this.props.dispatch({type: 'CLOSE_MODAL'})
-    // document.body.style.overflow = null;
+    document.body.style.overflow = null;
+    document.documentElement.style.overflow = null;
   }
 
   render() {
     return (
       <div className="button-container" id={this.props.id}>
-        <div className={`button ${this.state.open ? 'close' : 'open' }`}
+        <div className={`button ${this.state.open ? 'close' : 'open' } ${this.props.modal.scrolled ? 'show-text' : '' }`}
           style={{bottom: this.state.bottom}}
           onClick={!this.props.modal.open ? this.openModal : this.closeModal}>
 

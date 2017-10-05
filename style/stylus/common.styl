@@ -1,11 +1,14 @@
 .modal {
+  overflow-y: scroll; /* has to be scroll, not auto */
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
   z-index: 999;
   position: fixed;
   background: #fff;
   top: 150%;
   width: 100vw;
   height: 100vh;
-  padding: 30px 30px 50px;
+  padding: 30px 30px 140px;
   transition: top .5s ease-in-out;
   &.active {
     top: 0;
@@ -14,7 +17,6 @@
     text-align: center;
     margin-bottom: 20px;
   }
-  overflow: auto;
   p {
     margin-bottom: 20px;
   }
@@ -72,7 +74,7 @@
     }
     &.close {
       position: fixed;
-      bottom: 20px !important;
+      bottom: 30px !important;
       left: 0;
       right: 0;
       margin: auto;
@@ -82,8 +84,24 @@
       }
       >span {
         transform: rotateZ(45deg);
-        border: 0;
+        // border: 0;
         font-size: 50px;
+      }
+      &.show-text {
+        max-width: 150px;
+        background: rgba(0, 0, 0, 0.8);
+        transition: bottom .75s, max-width .5s, background .5s;
+        >span {
+          &::after {
+            content: 'CLOSE';
+            display: inline-block;
+            transform: rotateZ(-45deg);
+            top: -75px;
+            position: relative;
+            font-size: 20px;
+            padding-left: 30px;
+          }
+        }
       }
     }
   }

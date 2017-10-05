@@ -107,6 +107,10 @@ export class Home extends Component {
                 <li>Model after GoodReads / Letterboxd</li>
                 <li>Find ways to give value to the user while making the user valuable to stakeholders</li>
               </ul>
+
+              <div class="portfolio-item_image" style="margin-bottom: 20px;">
+                <img src="/style/images/scanned-documents@3x.jpg" style="max-width: 100%; max-height: 500px"/>
+              </div>
             </div>
 
             <div>
@@ -116,6 +120,13 @@ export class Home extends Component {
                 <li>How to onboard users and get them to start a library and wishlist</li>
                 <li>Big database set and issues of how to reconcile duplicates</li>
               </ul>
+
+              <div class="portfolio-item_image" style="margin: 20px 0;">
+                <img src="/style/images/signupwireframe@3x.png" style="max-height: 400px;"/>
+              </div>
+              <div class="portfolio-item_image" style="margin: 20px 0;">
+                <img src="/style/images/reviewwireframe@3x.png" style="max-height: 400px;"/>
+              </div>
             </div>
 
             <div>
@@ -125,18 +136,27 @@ export class Home extends Component {
                 <br />
                 Funnel mobile users to home tab, where it is easy to add games to want list and diary, as well as see content from prodigious reviewers
               </p>
-
               <p>
                 <span style="font-weight: 600;">Guided usage based on standard T-shaped eye tracking pattern</span>
                 <br />
                 just-in-time updates that are relevant to the user’s now playing and want list queue
               </p>
-
               <p>
                 <span style="font-weight: 600;">A minimalistic but full featured hub</span>
                 <br />
                 Deals, news, reviews, curated lists, all organised neatly on the home screen
               </p>
+
+              <div class="portfolio-item_image" style="margin: 20px 0;">
+                <img src="/style/images/i-pad-pro-mockup@3x.png" style="max-width: 100%; max-height: 500px"/>
+              </div>
+              <div class="portfolio-item_image" style="margin: 20px 0;">
+                <img src="/style/images/iphone-7-login@3x.png" style="max-height: 400px;"/>
+              </div>
+              <div class="portfolio-item_image" style="margin: 20px 0;">
+                <img src="/style/images/mockup-iphone-x@3x.png" style="max-height: 400px;"/>
+              </div>
+
             </div>
 
           `}
@@ -146,7 +166,7 @@ export class Home extends Component {
 
       <div className="contact about">
         <a href="http://www.linkedin.com/in/josephfordthompson" target="_blank" className="li">View profile on linkedin</a>
-        <a href="/docs/cv.pdf" className="cv">Download my CV</a>
+        <a href="/docs/cv.pdf" target="_blank" className="cv">Download CV</a>
         <a href="mailto:jfordthompson@gmail.com" className="email">Contact me</a>
       </div>
 

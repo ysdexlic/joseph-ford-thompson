@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --inline --progress",
+    "start": "webpack-dev-server --inline --progress --host 192.168.0.23",
     "build": "NODE_ENV=production webpack --progress -p --colors",
     "postbuild": "npm run copyassets && npm run stylus",
     "copyassets": "mkdir -p build/style && mkdir -p build/style/images && cp -r style/images/* build/style/images",
