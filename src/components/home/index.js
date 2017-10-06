@@ -23,7 +23,7 @@ export class Home extends Component {
           <Splitter />
           <p>
             <span className="pink">My professional motivation</span> is to collaborate
-            <span className="italic">without ego or preconception</span> on emotionally engaging products.
+            <span className="italic"> without ego or preconception</span> on emotionally engaging products.
             I believe in shining light on colleagues’ talents
             at solving problems and incorporating their ideas into the design work.
           </p>
