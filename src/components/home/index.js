@@ -218,7 +218,7 @@ export class Home extends Component {
               <h2 class="pink">MYNEXTGAME</h2>
               <div class="portfolio-item" style="margin-bottom: 20px; max-height: 550px;">
                 <div class="portfolio-item_image">
-                  <img src="/style/images/mockup-iphone-x@3x.png" style="max-height: 550px;"/>
+                  <img src="/style/images/mockup-iphone-x@3x.png" style="max-height: 550px; max-width: 100%; vertical-align: middle;"/>
                 </div>
               </div>
             </div>
