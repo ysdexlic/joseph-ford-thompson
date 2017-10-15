@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import Button from '../common/button'
 import { Splitter } from '../common/splitter'
 import { About } from './about'
 
 export class Home extends Component {
+
+  closeModal = (e) => {
+    return console.log('hi')
+  }
 
   render() {
     return (
@@ -87,9 +92,101 @@ export class Home extends Component {
           `}
         />
 
-        <div className="about">
+        {/* WOEHR ASSOCIATES */}
+        <div className="about" style={{marginBottom: '40px'}}>
           <Splitter />
           <h1>Work</h1>
+          <p>
+            <span className="pink">Woehr Associates Site Redesign</span> - a mobile-first, responsive redesign of a business psychology consulting firm based in New Jersey, USA. Design emphasises text readability, easy access to find location and the unique logo.
+          </p>
+          <div className="portfolio-item pink">
+            <div className="portfolio-item_image">
+              <img src="/style/images/woehr-associates-mockup@3x.jpg" style={{maxHeight: '250px', transform: 'scale(2)'}}/>
+            </div>
+          </div>
+        </div>
+
+        <Button name="See the design process" id="design-process-button"
+          html={`
+
+            <div>
+      				<div>
+  							<h4 style="margin: 0; text-align: left; color: #999; display: inline-block;">Joseph Ford Thompson</h4>
+                <div class="social-icons_dark">
+        					<a href="http://www.linkedin.com/in/josephfordthompson" target="_blank" class="l-icon"></a>
+        					<a href="http://www.twitter.com/jfordthompson" target="_blank" class="t-icon"></a>
+        				</div>
+
+                <p class="pink" style="font-size: 30px; font-weight: 400; letter-spacing: 4px; line-height: 20px;">+++++++++++++++++++</p>
+      				</div>
+      			</div>
+
+            <h1>Work</h1>
+
+            <div>
+              <h2 class="green">Woehr Associates Site Redesign</h2>
+              <div class="portfolio-item pink" style="margin-bottom: 20px; max-height: 550px;">
+                <div class="portfolio-item_image">
+                  <img src="/style/images/woehr-associates-mockup@3x.jpg" style="max-height: 550px;"/>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h2 class="green">OBJECTIVES</h2>
+              <ul>
+                <li>Design a mobile-first redesign of Woehr Associates old website</li>
+                <li>Prime usage has been determined to be how to locate the business premises</li>
+                <li>Incorporate potential for more image based content</li>
+              </ul>
+
+              <div class="portfolio-item_image" style="margin: 40px 0;">
+                <img src="/style/images/old-site@3x.jpg" style="max-width: 100%; max-height: 500px"/>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 40px;">
+              <h2 class="green">CHALLENGES</h2>
+              <ul style="margin-bottom: 40px;">
+                <li>Minimal direction - had to come up with entire concept based off of “make this site modern”</li>
+                <li>Have to work around very little existing image content</li>
+                <li>Lack of copy content means designing around future potential copy</li>
+              </ul>
+
+              <div class="portfolio-item_image" style="margin: 20px 0;">
+                <img src="/style/images/challenges@3x.jpg" style="max-height: 500px; max-width: 100%;"/>
+              </div>
+            </div>
+
+            <div>
+              <h2 class="green">DESIGN DECISIONS</h2>
+              <p>
+                <span style="font-weight: 600;">Minimalistic color scheme & logo centred design</span>
+                <br />
+                The Woehr Associates logo was judged to be a strong point of the brand. No existing version of this existed in high resolution so I turned it into a vector graphic that can be scaled and recoloured and made it the centerpiece of the new design. Images on homepage are covered with half transparent gradient. Body text has large line height for legibility. Colour scheme can be easily changed - shown above is a sample light mode and dark mode.
+              </p>
+              <p>
+                <span style="font-weight: 600;">Heavy emphasis on location</span>
+                <br />
+                Big, hard-to-miss, easily tappable buttons for people who need to land on the site looking for location
+              </p>
+              <p style="margin-bottom: 40px;">
+                <span style="font-weight: 600;">Scope for growth</span>
+                <br />
+                The homepage design is flexible, and could accomodate news, USPs and modal CTAs. Less important parts of the current site like staff members are relegated to hamburger menu on Mobile view, and are in top navigation on desktop
+              </p>
+
+              <div class="portfolio-item_image" style="margin: 20px 0;">
+                <img src="/style/images/dark-mode-woehr-associates-mockup@3x.jpg" style="max-width: 100%;"/>
+              </div>
+
+            </div>
+
+          `}
+        />
+
+        {/* MY NEXT GAME */}
+        <div className="about">
           <p>
             <span className="pink">mynextgame</span> - a GoodReads style social network for gamers to catalogue and review their video game library, as well as find the next great game to play.
           </p>
@@ -119,9 +216,9 @@ export class Home extends Component {
 
             <div>
               <h2 class="pink">MYNEXTGAME</h2>
-              <div class="portfolio-item" style="margin-bottom: 20px;">
+              <div class="portfolio-item" style="margin-bottom: 20px; max-height: 550px;">
                 <div class="portfolio-item_image">
-                  <img src="/style/images/mockup-iphone-x@3x.png" style="max-height: 250px;"/>
+                  <img src="/style/images/mockup-iphone-x@3x.png" style="max-height: 550px;"/>
                 </div>
               </div>
             </div>
@@ -201,4 +298,4 @@ export class Home extends Component {
   }
 }
 
-export default Home
+export default connect()(Home)
