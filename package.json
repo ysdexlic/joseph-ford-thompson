@@ -6,10 +6,11 @@
   "scripts": {
     "start": "webpack-dev-server --inline --progress --host 192.168.0.23",
     "build": "NODE_ENV=production webpack --progress -p --colors",
-    "postbuild": "npm run copyassets && npm run stylus && firebase deploy",
+    "postbuild": "npm run copyassets && npm run stylus",
     "copyassets": "mkdir -p build/style && mkdir -p build/style/images && mkdir -p build/docs && cp -r style/images/* build/style/images && cp -r docs/* build/docs && cp favicon.ico build/favicon.ico",
     "stylus": "stylus style/style.styl -o build/style/style.css",
-    "server": "node server"
+    "server": "node server",
+    "deploy": "npm run build && firebase deploy"
   },
   "author": "",
   "license": "ISC",
