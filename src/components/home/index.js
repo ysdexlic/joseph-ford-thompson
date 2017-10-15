@@ -93,7 +93,7 @@ export class Home extends Component {
         />
 
         {/* WOEHR ASSOCIATES */}
-        <div className="about" style={{marginBottom: '40px'}}>
+        <div className="about">
           <Splitter />
           <h1>Work</h1>
           <p>
@@ -127,7 +127,7 @@ export class Home extends Component {
               <h2 class="green">Woehr Associates Site Redesign</h2>
               <div class="portfolio-item pink" style="margin-bottom: 20px; max-height: 550px;">
                 <div class="portfolio-item_image">
-                  <img src="/style/images/woehr-associates-mockup@3x.jpg" style="max-height: 550px;"/>
+                  <img src="/style/images/woehr-associates-mockup@3x.jpg" style="max-height: 550px; max-width: 100%; vertical-align: middle;"/>
                 </div>
               </div>
             </div>
