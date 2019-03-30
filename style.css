@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Montserrat:700');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,800');
 
 html, body {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
@@ -19,12 +19,12 @@ body {
 
 h1, h2, h3 {
   margin: 0 0 10px;
-  font-family: 'Crimson Text', serif;
+  font-family: 'Work Sans', sans-serif;
 }
 
 h1 {
-  font-family: 'Montserrat', sans-serif;
   text-shadow: 2px 2px rgba(0,0,0,0.25);
+  font-weight: 800,
 }
 
 h2 {
