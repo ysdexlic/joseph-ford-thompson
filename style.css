@@ -8,10 +8,6 @@ html, body {
   background: #F9677A;
 }
 
-body {
-  position: fixed;
-}
-
 ::selection {
   color: #555;
   background: rgba(255,255,255,1);
